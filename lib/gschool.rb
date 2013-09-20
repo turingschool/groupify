@@ -1,5 +1,6 @@
 require "gschool/version"
 require "gschool/group"
+require "gschool/discuss"
 require "gschool/zero"
 require "gschool/one"
 
@@ -25,5 +26,9 @@ module GSchool
 
   def self.current
     GSchool::One.all
+  end
+
+  def self.discuss
+    GSchool::Discuss.new(GSchool::One.all)
   end
 end
