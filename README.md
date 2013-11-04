@@ -45,7 +45,10 @@ If there are 3 instructors available for 1-on-1s, this will create the groups,
 and format them for the outline:
 
 ```ruby
-puts GSchool.md(GSchool::One.groups(3))
+n = 3
+start_time = '14:00'
+duration = 10 # minutes
+puts GSchool.one_on_ones(n, start_time, duration)
 ```
 
 ## Contributing
