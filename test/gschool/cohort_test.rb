@@ -107,5 +107,11 @@ module GSchool
 
       assert_equal [:Bob, :Charlie, :Eve, :Fred], cohort.teammates("Alice")
     end
+
+    def test_new_teams_dont_repeat
+      cohort = Cohort.from_yml('./test/fixtures/students.yml')
+      expected = [[:Alice, :Dave], [:Charlie], [:Eve, :Fred]]
+      assert_equal expected, cohort.teams_of(2).sort
+    end
   end
 end

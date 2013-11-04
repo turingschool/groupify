@@ -37,7 +37,25 @@ module GSchool
       @teammates[name.intern].to_a
     end
 
+    def teams_of(n)
+      ok = []
+      candidate_teams(n).shuffle.each do |team|
+        if (team & ok.flatten).empty?
+          ok << team
+        end
+      end
+      ok + [all - ok.flatten]
+    end
+
     private
+
+    def candidate_teams(n)
+      all.combination(n).to_a.select do |names|
+        names.all? do |name|
+          (names & teammates(name)).empty?
+        end
+      end
+    end
 
     def compute_teammates
       collaborators = Hash.new {|mates, name| mates[name] = Teammates.new(name)}
