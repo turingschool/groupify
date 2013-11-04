@@ -9,6 +9,13 @@ module GSchool
   Zero = Cohort.from_yml(File.absolute_path('../data/gschool0.yml', __FILE__))
   One = Cohort.from_yml(File.absolute_path('../data/gschool1.yml', __FILE__))
 
+  def self.teams_of(n)
+    teams = current.teams_of(n).map do |names|
+      names.join(', ')
+    end
+    md(teams)
+  end
+
   def self.md(list)
     if list.first.is_a?(Array)
       list.map do |sub_list|
@@ -28,7 +35,7 @@ module GSchool
   end
 
   def self.current
-    GSchool::One.all
+    GSchool::One
   end
 
   def self.discuss
