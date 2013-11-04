@@ -1,0 +1,11 @@
+---
+names:
+  - Alice
+  - Bob
+  - Charlie
+usernames:
+  - alice
+  - bob
+  - charlie
+left:
+  - Bob

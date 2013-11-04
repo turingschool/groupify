@@ -1,10 +1,11 @@
 require "gschool/version"
 require "gschool/group"
+require "gschool/cohort"
 require "gschool/discuss"
-require "gschool/zero"
-require "gschool/one"
 
 module GSchool
+  Zero = Cohort.from_yml(File.absolute_path('../data/gschool0.yml', __FILE__))
+  One = Cohort.from_yml(File.absolute_path('../data/gschool1.yml', __FILE__))
 
   def self.md(list)
     if list.first.is_a?(Array)
