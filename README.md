@@ -1,6 +1,6 @@
-# Gschool
+# gschool
 
-TODO: Write a gem description
+Group management for gSchool.
 
 ## Installation
 
@@ -18,7 +18,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Randomized Students for Retrospectives
+
+```ruby
+retro = GSchool.discuss
+
+retro.next
+# => "John Doe"
+retro.next
+# => "Alice Smith"
+```
+
+### 1-on-1 Lists
+
+If there are 3 instructors available for 1-on-1s, this will create the groups,
+and format them for the outline:
+
+```ruby
+puts GSchool.md(GSchool::One.groups(3))
+```
 
 ## Contributing
 
