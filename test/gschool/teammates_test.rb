@@ -10,7 +10,7 @@ module GSchool
       mates << :"Bob"
       mates << :"Charlie"
 
-      assert_equal [:"Bob", :"Charlie"], mates.all
+      assert_equal [:"Bob", :"Charlie"], mates.to_a
     end
 
     def test_ignores_duplicates
@@ -18,7 +18,7 @@ module GSchool
       mates << :"Bob"
       mates << :"Bob"
       mates << :"Charlie"
-      assert_equal [:"Bob", :"Charlie"], mates.all
+      assert_equal [:"Bob", :"Charlie"], mates.to_a
     end
 
     def test_returns_in_alphabetical_order
@@ -26,7 +26,7 @@ module GSchool
       mates << :"Charlie"
       mates << :"Bob"
 
-      assert_equal [:"Bob", :"Charlie"], mates.all
+      assert_equal [:"Bob", :"Charlie"], mates.to_a
     end
 
     def test_ignores_original_student
@@ -35,14 +35,14 @@ module GSchool
       mates << :"Bob"
       mates << :"Alice"
 
-      assert_equal [:"Bob", :"Charlie"], mates.all
+      assert_equal [:"Bob", :"Charlie"], mates.to_a
     end
 
     def test_add_a_bunch_of_teammates_at_once
       mates = Teammates.new(:"Alice")
       mates << [:"Charlie", :"Bob"]
 
-      assert_equal [:"Bob", :"Charlie"], mates.all
+      assert_equal [:"Bob", :"Charlie"], mates.to_a
     end
   end
 end

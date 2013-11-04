@@ -34,7 +34,7 @@ module GSchool
 
     def teammates(name)
       @teammates ||= compute_teammates
-      @teammates[name.intern].all
+      @teammates[name.intern].to_a
     end
 
     private

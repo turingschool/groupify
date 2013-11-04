@@ -12,7 +12,7 @@ class Teammates
     end
   end
 
-  def all
+  def to_a
     @mates.sort
   end
 end
