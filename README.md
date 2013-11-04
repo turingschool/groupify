@@ -29,6 +29,22 @@ retro.next
 # => "Alice Smith"
 ```
 
+### Project Teams
+
+Add project teams to the `lib/data/gschool1.yml` file.
+
+Generate new project teams with:
+
+```ruby
+GSchool::One.teams_of(3)
+```
+
+To format these nicely, try:
+
+```ruby
+puts GSchool.md(GSchool::One.teams_of(3))
+```
+
 ### 1-on-1 Lists
 
 If there are 3 instructors available for 1-on-1s, this will create the groups,
