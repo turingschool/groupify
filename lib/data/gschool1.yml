@@ -51,3 +51,28 @@ usernames:
   - TylerLong86
   - wvmitchell
   - x46672
+projects:
+  - name: Sales Engine
+    teams:
+    - Quentin Tai & Nathaniel Watts
+    - Rolen Le & Will Mitchell
+    - Simon Taranto & Katrina Engelsted
+    - Jonah Moses & Bree Thomas
+    - Ben Lewis & Louisa Barrett
+    - Persa Zula & Nikhil Taneja
+    - George Hudson & Luke Martinez
+    - Lauren Spath Luhring & Tyler Long
+    - Kevin Powell & Brian Winterling
+    - Bryana Knight & Magan Adam
+    - Antony Siegert & Billy Griffin
+    - Darryl Pequeen & Romeeka Gayhart & Ben Horne
+  - name: Clone Wars
+    teams:
+    - Jonah Moses, Brian Winterling, Kevin Powell
+    - Nikhil Taneja, Lauren Spath Luhring, Romeeka Gayhart
+    - Simon Taranto, Katrina Englestad, Bryana Knight
+    - Ben Lewis, Antony Siegert, Luke Martinez
+    - Tyler Long, Ben Horne, Magan Adam
+    - Will Mitchell, Darryl Pequeen, Billy Griffin
+    - Quentin Tai, Persa Zula, George Hudson
+    - Bree Thomas, Nathaniel Watts, Louisa Barrett, Rolen Le

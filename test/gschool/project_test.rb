@@ -4,15 +4,17 @@ require 'minitest/pride'
 require './lib/gschool/project'
 
 class ProjectTest < Minitest::Test
-  # The teams can be added in various formats.
-  # The team members are sorted.
-  # The team members are stored as symbols.
-  def test_add_teams
-    project = Project.new("Mixtape")
-    project << ["Alice Smith", "Bob Jones"]
-    project << "Dave Ritchie & Charlie Baker"
-    project << "Fred Burrough, Eve Forrest"
+  def test_initialize_with_teams
+    data = {
+      'name' => 'calorieado',
+      'teams' => [
+        "Alice Smith, Bob Jones",
+        "Dave Ritchie & Charlie Baker",
+        "Fred Burrough, Eve Forrest"
+      ]
+    }
 
+    project = Project.new(data)
     expected = [
       [:"Alice Smith", :"Bob Jones"],
       [:"Charlie Baker", :"Dave Ritchie"],

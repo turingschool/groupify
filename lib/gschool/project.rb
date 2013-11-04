@@ -1,12 +1,12 @@
 class Project
   attr_reader :name, :teams
-  def initialize(name)
-    @name = name
-    @teams = []
-  end
+  def initialize(data)
+    @name = data['name']
 
-  def <<(team)
-    @teams << normalize(team)
+    @teams = []
+    (data['teams'] || []).each do |names|
+      @teams << normalize(names)
+    end
   end
 
   private

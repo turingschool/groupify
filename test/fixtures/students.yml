@@ -3,9 +3,23 @@ names:
   - Alice
   - Bob
   - Charlie
+  - Dave
+  - Eve
 usernames:
   - alice
   - bob
   - charlie
+  - dave
+  - eve
 left:
   - Bob
+projects:
+  - name: mixtape
+    teams:
+      - Alice & Bob & Eve
+      - Charlie & Dave
+  - name: cookie monster
+    teams:
+      - Alice, Bob, Charlie
+      - Bob, Dave, Eve
+

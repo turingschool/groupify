@@ -1,5 +1,7 @@
 require "gschool/version"
 require "gschool/group"
+require "gschool/project"
+require "gschool/teammates"
 require "gschool/cohort"
 require "gschool/discuss"
 
