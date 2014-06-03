@@ -7,11 +7,12 @@ require "groupify/schedule"
 require "groupify/discuss"
 
 module Groupify
+  Turing1406 = Cohort.from_yml(File.absolute_path('../data/turing-1406.yml', __FILE__))
   GSchool0 = Cohort.from_yml(File.absolute_path('../data/gschool0.yml', __FILE__))
   GSchool1 = Cohort.from_yml(File.absolute_path('../data/gschool1.yml', __FILE__))
 
   def self.current
-    GSchool1
+    Turing1406
   end
 
   def self.teams_of(n)
@@ -47,6 +48,6 @@ module Groupify
   end
 
   def self.discuss
-    Groupify::Discuss.new(current.all)
+    Discuss.new(current.all)
   end
 end
