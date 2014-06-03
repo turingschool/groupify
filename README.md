@@ -1,6 +1,7 @@
 # gschool
 
-Group management for gSchool.
+Group management for turing (or whatever, really).
+Currently it's called gschool, because we renamed the project but haven't messed with the gem yet.
 
 ## Installation
 
