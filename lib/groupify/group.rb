@@ -1,4 +1,4 @@
-module GSchool
+module Groupify
   module Group
     def random
       all.shuffle

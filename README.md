@@ -1,28 +1,20 @@
-# gschool
+# groupify
 
 Group management for turing (or whatever, really).
-Currently it's called gschool, because we renamed the project but haven't messed with the gem yet.
+Currently it's called groupify, because we renamed the project but haven't messed with the gem yet.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Clone this repository, and rake install it.
 
-    gem 'gschool'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install gschool
+    rake install
 
 ## Usage
 
 ### Randomized Students for Retrospectives
 
 ```ruby
-retro = GSchool.discuss
+retro = Groupify.discuss
 
 retro.next
 # => "John Doe"
@@ -37,7 +29,7 @@ Add project teams to the `lib/data/gschool1.yml` file.
 Generate new project teams with:
 
 ```ruby
-puts GSchool.teams_of(3)
+puts Groupify.current.teams_of(3)
 ```
 
 ### 1-on-1 Lists
@@ -49,7 +41,7 @@ and format them for the outline:
 n = 3
 start_time = '14:00'
 duration = 10 # minutes
-puts GSchool.one_on_ones(n, start_time, duration)
+puts Groupify.one_on_ones(n, start_time, duration)
 ```
 
 ## Contributing

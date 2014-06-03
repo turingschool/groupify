@@ -1,12 +1,12 @@
 gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/gschool/project'
-require './lib/gschool/teammates'
-require './lib/gschool/group'
-require './lib/gschool/cohort'
+require './lib/groupify/project'
+require './lib/groupify/teammates'
+require './lib/groupify/group'
+require './lib/groupify/cohort'
 
-module GSchool
+module Groupify
   class CohortTest < Minitest::Test
     def test_simple_cohort
       cohort = Cohort.new(%w(Charlie Alice Bob), %w(alice charlie Bob))

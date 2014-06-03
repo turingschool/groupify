@@ -1,17 +1,17 @@
-require "gschool/version"
-require "gschool/group"
-require "gschool/project"
-require "gschool/teammates"
-require "gschool/cohort"
-require "gschool/schedule"
-require "gschool/discuss"
+require "groupify/version"
+require "groupify/group"
+require "groupify/project"
+require "groupify/teammates"
+require "groupify/cohort"
+require "groupify/schedule"
+require "groupify/discuss"
 
-module GSchool
-  Zero = Cohort.from_yml(File.absolute_path('../data/gschool0.yml', __FILE__))
-  One = Cohort.from_yml(File.absolute_path('../data/gschool1.yml', __FILE__))
+module Groupify
+  GSchool0 = Cohort.from_yml(File.absolute_path('../data/gschool0.yml', __FILE__))
+  GSchool1 = Cohort.from_yml(File.absolute_path('../data/gschool1.yml', __FILE__))
 
   def self.current
-    GSchool::One
+    GSchool1
   end
 
   def self.teams_of(n)
@@ -47,6 +47,6 @@ module GSchool
   end
 
   def self.discuss
-    GSchool::Discuss.new(GSchool::One.all)
+    Groupify::Discuss.new(current.all)
   end
 end

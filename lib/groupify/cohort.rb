@@ -1,5 +1,5 @@
 require 'yaml'
-module GSchool
+module Groupify
   class Cohort
     include Group
 
