@@ -1,15 +1,15 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'gschool/version'
+require 'groupify/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "gschool"
-  spec.version       = Gschool::VERSION
+  spec.name          = "groupify"
+  spec.version       = Groupify::VERSION
   spec.authors       = ["Katrina Owen"]
   spec.email         = ["katrina.owen@gmail.com"]
-  spec.description   = %q{roll call}
-  spec.summary       = %q{gschool student list}
+  spec.description   = %q{roll call and stuff}
+  spec.summary       = %q{random number generator connected to people names.}
   spec.homepage      = ""
   spec.license       = "MIT"
 

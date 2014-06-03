@@ -1,4 +1,4 @@
-module GSchool
+module Groupify
   class Discuss
     attr_reader :students
     def initialize(students)

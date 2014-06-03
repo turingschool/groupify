@@ -1,9 +1,9 @@
 gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/gschool/teammates'
+require './lib/groupify/teammates'
 
-module GSchool
+module Groupify
   class TeammatesTest < Minitest::Test
     def test_stores_teammates
       mates = Teammates.new(:"Alice")

@@ -1,9 +1,9 @@
 gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/gschool/schedule'
+require './lib/groupify/schedule'
 
-module GSchool
+module Groupify
   class ScheduleTest < Minitest::Test
     def test_simple_schedule
       names = %w(Alice Bob Charlie)
