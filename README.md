@@ -11,38 +11,8 @@ Clone this repository, and rake install it.
 
 ## Usage
 
-### Randomized Students for Retrospectives
-
-```ruby
-retro = Groupify.discuss
-
-retro.next
-# => "John Doe"
-retro.next
-# => "Alice Smith"
-```
-
-### Project Teams
-
-Add project teams to the `lib/data/gschool1.yml` file.
-
-Generate new project teams with:
-
-```ruby
-puts Groupify.current.teams_of(3)
-```
-
-### 1-on-1 Lists
-
-If there are 3 instructors available for 1-on-1s, this will create the groups,
-and format them for the outline:
-
-```ruby
-n = 3
-start_time = '14:00'
-duration = 10 # minutes
-puts Groupify.one_on_ones(n, start_time, duration)
-```
+See the file example.rb for ways to use the lib.
+You can uncomment the examples to actually run them.
 
 ## Contributing
 
